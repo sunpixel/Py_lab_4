@@ -4,6 +4,8 @@ import ex1
 import ex2
 import ex3
 import ex4
+import ex5
+import ex6
 
 def divide():
     '''Prints spaces'''
@@ -32,19 +34,20 @@ def get_val_unk(number = 0):
 
 if __name__ == '__main__':
 #    ex1.func_1(get_value())
-    divide()
+#    divide()
 #    ex1.func_2(get_value())
-    divide()
+#    divide()
     #
 #    ex2.func_1(get_value(), get_value())
-    divide()
+#    divide()
     #
 #    ex3.func_1(get_val_unk())
-    divide()
+#    divide()
     #
-    ex4.func_1(get_value(), get_value())
-    divide()
-    ex4.func_2(get_val_unk())
-    divide()
-    ex4.func_3()
+#    ex4.func_1(get_value(), get_value())
+#    divide()
+#    ex4.func_2(get_val_unk())
+#    divide()
+#    ex4.func_3()
     #
+    ex5.func_1(get_value())
