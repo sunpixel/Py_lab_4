@@ -1,5 +1,8 @@
 '''Main executable file'''
 
+# pylint:disable=W0718
+# Comment to suppress warning
+
 import ex1
 import ex2
 import ex3
@@ -33,21 +36,32 @@ def get_val_unk(number = 0):
     return values
 
 if __name__ == '__main__':
-#    ex1.func_1(get_value())
-#    divide()
-#    ex1.func_2(get_value())
-#    divide()
-    #
-#    ex2.func_1(get_value(), get_value())
-#    divide()
-    #
-#    ex3.func_1(get_val_unk())
-#    divide()
-    #
-#    ex4.func_1(get_value(), get_value())
-#    divide()
-#    ex4.func_2(get_val_unk())
-#    divide()
-#    ex4.func_3()
-    #
-    ex5.func_1(get_value())
+    try:
+        ex1.func_1(get_value())
+        divide()
+        ex1.func_2(get_value())
+        divide()
+        #
+        ex2.func_1(get_value(), get_value())
+        divide()
+        #
+        ex3.func_1(get_val_unk())
+        divide()
+        #
+        ex4.func_1(get_value(), get_value())
+        divide()
+        ex4.func_2(get_val_unk())
+        divide()
+        ex4.func_3()
+        divide()
+        #
+        ex5.func_1(get_value())
+        divide()
+        #
+        print('We would like to get the following info:')
+        print('Name, Price, Quantity')
+        ex6.func_1(get_val_unk(3))
+        divide()
+    except Exception as e:
+        print('An error occured durin execution sorry')
+        print(e)
