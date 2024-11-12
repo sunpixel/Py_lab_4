@@ -29,7 +29,7 @@ def func_2(*nums):
     x = 0
     i = 0
     try:
-        while i <= len(nums):
+        while i <= len(nums[0]):
             print(f'Current number in tuple is: {nums[0][i]}')
             if i == 0:
                 x = nums[0][i]
@@ -41,31 +41,33 @@ def func_2(*nums):
 
     except IndexError:
         print('IndexError detected, switching to another execuatble')
-        while i < len(nums):
+        while i < len(nums[0]):
             print(f'Current number in tuple is: {nums[0][i]}')
             if i == 0:
                 x = nums[0][i]
                 i += 1
             else:
-                print(f'Division result is: {x / nums[0][i]}')
-                x = nums[0][i]
+                result = x / float(nums[0][i])
+                print(f'Division result is: {result}')
+                x = result
                 i += 1
 
     except ZeroDivisionError:
         print('Zero division is not permitted. Reseting your result')
-        func_2(main.get_val_unk(len(nums)))
+        func_2(main.get_val_unk(len(nums[0])))
 
     except TypeError:
-        print('ValueError detected, switching to another execuatble')
+        print('TypeError detected, switching to another execuatble')
         i = 0
-        while i <= len(nums):
+        while i < len(nums[0]):
             print(f'Current number in tuple is: {nums[0][i]}')
             if i == 0:
                 x = float(nums[0][i])
                 i += 1
             else:
-                print(f'Division result is: {x / float(nums[0][i])}')
-                x = float(nums[0][i])
+                result = x / float(nums[0][i])
+                print(f'Division result is: {result}')
+                x = result
                 i += 1
 
 
